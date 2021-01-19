@@ -106,7 +106,7 @@ func (s *RedisStore) Invalidate(options InvalidateOptions) error {
 				continue
 			}
 
-			for cacheKey := range cacheKeys {
+			for _, cacheKey := range cacheKeys {
 				s.Delete(cacheKey)
 			}
 
